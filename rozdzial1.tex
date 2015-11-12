@@ -3,15 +3,32 @@
 
 %---------------------------------------------------------------------------
 
-\section{Cele pracy}
-\label{sec:celePracy}
+\section{Cel pracy}
+\label{sec:celPracy}
+Celem pracy jest zaprojektowanie oraz implementacja aplikacji internetowej umożliwiającej wyszukiwanie oraz dodawanie ogłoszeń dotyczących wynajmu oraz sprzedaży nieruchomości. Tworzony system będzie umożliwiał osobom szukającym lokum w danym mieście przeglądanie ofert oraz korzystanie z szerokiego wachlarza filtrów ułatwiających szukanie idealnego mieszkania lub domu. Aplikacja będzie również oferowała osobom posiadającym nieruchomości, stworzenie ogłoszenia korzystając z prostego i intuicyjnego kreatora ogłoszeń. Ponadto system będzie oferował zarejestrowanym użytkownikom możliwość otrzymywania  spersonalizowanych powiadomień w przypadku pojawienia się nowych ogłoszeń, które spełniają wymagane przez użytkownika kryteria. Dodatkowo aplikacja będzie umożliwiała nawiązanie kontaktu z osobą, która zamieściła ogłoszenie w serwisie. Ze strony technicznej moim celem jest stworzenie prostego w obsłudze i intuicyjnego serwisu, który będzie zrozumiały również dla mniej zaawansowanych użytkowników komputerów, zachowując jednakże określone wymagania dotyczące ogłoszeń, żeby umożliwić użytkownikom dokładne wyszukiwanie ofert.
 
 %---------------------------------------------------------------------------
 
 \section{Zawartość pracy}
 \label{sec:zawartoscPracy}
+Struktura pracy jest następująca:
+\begin{itemize}
+\item Pierwszy rozdział stanowi wprowadzanie, definiując przedmiot pracy, jej zawartość,  motyw wyboru tematu oraz analizę podobnych serwisów. 
+\item Rozdział drugi przedstawia wymagania biznesowe oraz funkcjonalne i niefunkcjonalne które zdefiniowałem przy procesie projektowania aplikacji. Znajduję się w nim także słownik pojęć 
+\item Rozdział trzeci jest szczegółową analizą przeprowadzoną na podstawie wymagań zdefiniowanych w poprzednim rozdziale. 
+\item W rozdziale czwartym są przedstawione konkretne rozwiązania z dziedziny projektowania aplikacji. Opisana jest architektura oraz koncept intefejsu graficznego oraz restowego. W tym rozdziale zawarte są również założenia z dziedziny bezpieczeństwa systemu. 
+\item W piątym rozdziale jest opisane działanie funkcjonalności dostarczonej aplikacji. 
+\item Szósty rozdział stanowi podsumowanie pracy w którym są zawarte wnioski.
+\end{itemize}
 
 %---------------------------------------------------------------------------
 
-\section{Geneza tematu}
-\label{sec:genezaTematu}
+\section{Analiza podobnych serwisów}
+\label{sec:analizaSerwisow}
+Powszechność internetu sprawiła, że obecnie niewiele osób próbuje znaleźć mieszkanie lub dom do wynajęcia za pomocą innych mediów. Wraz z powszechnością internetu oraz popytem na mieszkania, towarzyszącym miastom akademickim, powstało wiele serwisów oferujących możliwość dodawania oraz przeglądania ogłoszeń na rynku nieruchomości.\\
+Ze względu na koszt zamieszczania ogłoszeń można podzielić aplikację na dwie grupy:
+\begin{itemize}
+\item Serwisy płatne, najczęsciej agencje zajmujące się wynajmowaniem mieszkań. Umieszczenie ogłoszenia w takim serwisie wiąże się z zapłaceniem agencji sporej ilości pieniędzy.
+\item Serwisy bezpłatne, zamieszczenie ogłoszenie w serwisie tego typu najczęsciej jest pozbawione jakicholwiek opłat. W serwisach spotykane są dodatkowe opłaty za wyróżnienie ogłoszenia na tle innych.
+\end{itemize}
+Najbardziej znanymi bezpłatnymi serwisami z ogłoszeniami w Polsce są \quotes{gumtree} oraz \quotes{olx} (dawniej \quotes{tablica}). Nie są to jednak aplikacje dedykowane dla ogłoszeń o nieruchomościach co spowodowało powstanie pewnych niedogodności dla użytkownika podczas wyszukiwania idealnych ofert. Serwisy chcąc być wszechstronymi pozwalają użytkownikom na dodawanie ogłoszeń które nie są odpowiednio opisane. Jest to duży minus tych aplikacji, gdyż niemożliwym jest zastosowanie dobrego systemu fitrów, który pozwalałby na zawężenie zwracanych wyników wyszukiwania. Największą trudnością jaką dostrzegłem w trakcie analizowania dostępnych rozwiązań była niemożliwość dokładnego szukania we wskazanej lokalizacji. Szukanie ogłoszeń w danej lokalizacji odbywa się najczęściej po tytule dostarczonym przez osobę zamieszczającą ogłoszenie. Nie jest to najlepsze rozwiązanie, gdyż osoby chcące znaleźć nabywców na mieszkanie często podają wiele dzielnic w pobliżu której znajduje się lokum lub nie podają dokładnej lokalizacji. Wyżej wymienione serwisy oraz wiele dostępnych w sieci aplikacji służących szukaniu ofert nieruchomości łączy sposób prezentacji wyników wyszukiwania w postaci listy.
