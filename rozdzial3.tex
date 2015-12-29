@@ -28,6 +28,39 @@ Zazwyczaj oferty w serwisach ogłoszeniowych są wyświetlane jako lista. Jest t
 
 \section{Interfejs restowy}
 \label{sec:interfejsRestowy}
+Ruby on Rails udostępnia bogate wsparcie dla interfejsu restowego. Jeżeli zachowane są wzorce nazewnictwa i struktury katalogów, wtedy w myśl zasady "convention over configuration" nie jest wymagana żadna dodatkowa konfiguracja aplikacji lub serwera.\\
+Identyfikacja zasobów:
+\begin{itemize}
+\item user - użytkownik
+\item offer - oferta
+\item filter - filtr
+\item photo - zdjęcie
+\item location - lokalizacja
+\item watched\_offer - obserwowana oferta
+\end{itemize}
+Przykładowy format URI pozwalający na dostęp do zasobu:
+\begin{itemize}
+\item HTTP POST /users - żądania utworzenie użytkownika
+\item HTTP GET /users - żadanie wyświetlenia wszystkich użytkowników
+\item HTTP GET /users/4 - żądanie wyświetlenia użytkownika o id 4
+\item HTTP PUT /users/4 - żądanie zakutalizowania użytkownika o id 4
+\item HTTP DELETE /users/4 - żadanie usunięciąa użytkownika o id 4
+\end{itemize}
+Przykładowa reprezentacja zasobu user w formacie JSON:
+\begin{itemize}
+\item \begin{lstlisting}
+{
+  "id": 1,
+  "first_name" : "Piotr",
+  "last_name" : "Konsek",
+  "password" : "HBFlknadf7a09*&(^dsji",
+  "mail" : "mail@mail.com",
+  "created_at" : "2015-10-27T23:49:08.694+01:00",
+  "updated_at" : "2015-11-21T18:08:16.165+01:00",
+  "token" : "_pFotE3z5q7UvARkojvdYg"
+}
+\end{lstlisting}
+\end{itemize}
 
 \section{Opis struktury danych oferty}
 \label{sec:strukturaOferty}
@@ -38,21 +71,26 @@ Kluczową strukturą dla poprawnego działania całego programu jest struktura o
 \item size - rozmiar mieszkania w metrach kwadratowych
 \item rooms - liczba pokoi
 \item people - liczba osób mogących mieszkać w danej lokalizacji
-\item floor - piętro budynko
+\item floor - piętro budynku
 \item views - liczba wyświetleń oferty
 \end{itemize}
 \item Znakowy
 \begin{itemize}
 \item offer\_type - typ oferty
 \begin{itemize}
-\item O - od właściciela
-\item A - od agencji mieszkaniowej
+\item R - oferta wynajmu
+\item S - oferta kupna
 \end{itemize}
 \item location\_type - typ lokalizacji 
 \begin{itemize}
 \item H - dom
 \item F - mieszkanie
 \item R - pokój
+\end{itemize}
+\item issuer\_type - typ wystawcy ogłoszenia 
+\begin{itemize}
+\item O - właściciel, osoba prywatna
+\item A - agencja mieszkaniowa
 \end{itemize}
 \item building\_type - typ budynku
 \begin{itemize}
