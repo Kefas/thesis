@@ -78,7 +78,7 @@ Najważniejsze funkcjonalności systemu były przetestowane wzorując się na po
   \begin{itemize}
    \item Warunki początkowe:
     \begin{itemize}
-     \item W aplikacji istnieje conajmniej jedna oferta.
+     \item W aplikacji istnieje co najmniej jedna oferta.
     \end{itemize}
    \item Kroki testowe:
     \begin{enumerate}
@@ -95,7 +95,7 @@ Najważniejsze funkcjonalności systemu były przetestowane wzorując się na po
    \item Warunki początkowe:
     \begin{itemize}
      \item Użytkownik jest zalogowany
-     \item W aplikacji istnieje conajmniej jedna oferta przypisana dla zalogowanego użytkownika
+     \item W aplikacji istnieje co najmniej jedna oferta przypisana dla zalogowanego użytkownika
     \end{itemize}
    \item Kroki testowe:
     \begin{enumerate}
@@ -105,7 +105,7 @@ Najważniejsze funkcjonalności systemu były przetestowane wzorując się na po
      \item Kliknięcie przycisku \textbf{Submit} w przypadku pozytywnej walidacji zapisuje zmiany i przenosi użytkownika do formularza edycji zdjęć. W przeciwnym wypadku użytkownik zostaje powiadomiony o przyczynie niepowodzenia walidacji.
      \item Użytkownik może dodać kolejne zdjęcia lub usunąć już istniejące za pomocą przycisku w kształcie litery \textbf{X}.
      \item Po skończeniu edycji użytkownik powinien zostać przeniesiony do formularza edycji lokalizacji.
-     \item Po naciśnięciu przycisku \textbf{Submit} oferta powinna zostać zaktualizowana lub w przypadku niepoprawnej walidacji, powinnny zostać wyświetlone odpowiednie informacje o przyczynach niepowodzenia walidacji. W przypadku poprawnego zakończenia procesu walidacji oraz zapisywania formularz edycji powinien się zamknąć, a znacznik oferty na mapie powinien udostępniać zakutalizowane dane.
+     \item Po naciśnięciu przycisku \textbf{Submit} oferta powinna zostać zaktualizowana lub w przypadku niepoprawnej walidacji, powinnny zostać wyświetlone odpowiednie informacje o przyczynach niepowodzenia walidacji. W przypadku poprawnego zakończenia procesu walidacji oraz zapisywania formularz edycji powinien się  zamknąć, a znacznik oferty na mapie powinien udostępniać zakutalizowane dane.
     \end{enumerate}
   \end{itemize} 
 
@@ -121,7 +121,7 @@ Najważniejsze funkcjonalności systemu były przetestowane wzorując się na po
      \item Zalogowany użytkownik powinien widzieć na dole panelu z filtrami opcję zapisania filtrów. Po klinięciu przycisku użytkownik powinien zostać poinformowany o wyniku procesu zapisywania filtrów.
      \item Użytkownik po wylogowaniu i ponownym zalogowaniu do aplikacji powinien mieć filtry w takim samym stanie jak w momencie zapisu.
      \item Ponowne zapisanie filtrów powoduje nadpisanie poprzednich zapisanych fitrów.
-     \item Po usunięciu zapisanych filtrów użytkownik powinien miec filtry ustawione w pozycji domyślnej 
+     \item Po usunięciu zapisanych filtrów użytkownik powinien mieć filtry ustawione w pozycji domyślnej 
     \end{enumerate}
   \end{itemize}
 
@@ -134,18 +134,18 @@ Najważniejsze funkcjonalności systemu były przetestowane wzorując się na po
    \item Kroki testowe:
     \begin{enumerate}
      \item Należy otworzyć ofertę, zanotować aktualną liczbę wyświetleń, zamknąć ofertę.
-     \item Po ponownym otwarciu oferty liczba wyświetleń powinna się zwiększyć o jeden (lub o conajmniej jeden w przypadku testowania aplikacji na środowisku produkcyjnym).
+     \item Po ponownym otwarciu oferty liczba wyświetleń powinna się zwiększyć o jeden (lub o co najmniej jeden w przypadku testowania aplikacji na środowisku produkcyjnym).
     \end{enumerate}
   \end{itemize}
 \end{enumerate}
 
-\section{Realiacja testów}
+\section{Realizacja testów}
 Relizacja testów jest oparta o framework RSpec, który został stworzony na potrzeby testowania kodu napisanego w języku Ruby. RSpec udostępnia mechanizmy ułatwiające proces testowania takie jak fabryki obiektów, fabryki losowych danych. Z czasem framework został dostosowany również do testowania frameworku Rails. Testy składają  się z testów:
 \begin{itemize}
 \item Jednostkowych
 \item Funkcjonalnych
 \end{itemize}
-Testy jednostkowe służą do sprawdzania możliwie najmniejszych fragmentów kodu. Przykladem testu jednostkowego jest sprawdzenie czy metoda sprawdzająca przynależność oferty do użytkownika rzeczywiście działa zgodnie z założeniami w przypadku danych wejściowych dających poprawne i nieporawne rezultaty. Funkcje są sprawdzane również pod kątem odporności na błędne dane wejściowe takie jak złe typy, brak wartości. W takich przypadkach funkcjonalność sprawdza, czy został wyrzucony wyjątek jeżeli tak została funkcja zaprojektowana, czy też wyjątek został poprawnie obsłużony wewnątrz funkcji. Testy jednostkowe są bardzo pożyteczne w trakcie tworzenia oprogramowania, gdyż od samego początku umożliwiają wykrycie niepożądanych zachowań\\
+Testy jednostkowe służą do sprawdzania możliwie najmniejszych fragmentów kodu. Przykladem testu jednostkowego jest sprawdzenie czy metoda sprawdzająca przynależność oferty do użytkownika rzeczywiście działa zgodnie z założeniami w przypadku danych wejściowych dających poprawne i niepoprawne rezultaty. Funkcje są sprawdzane również pod kątem odporności na błędne dane wejściowe takie jak złe typy, brak wartości. W takich przypadkach funkcjonalność sprawdza, czy został wyrzucony wyjątek jeżeli tak została funkcja zaprojektowana, czy też wyjątek został poprawnie obsłużony wewnątrz funkcji. Testy jednostkowe są bardzo pożyteczne w trakcie tworzenia oprogramowania, gdyż od samego początku umożliwiają wykrycie niepożądanych zachowań\\
 \\
 Testy funkcjonalne służą do sprawdzenie poprawości całych funkcjonalności takich jak logowanie czy rejestracja. Testowanie odbywa się na podstawie wymagań jakie dana funkcjonalność powinna spełniać. Testy te, są szczególnie przydatne przy procesie rozwijania oprogramowania, dodawnia nowych funkcjonalności. Wykonując te testy można się upewnić, że żadna funkcjonalność nie została naruszona podczas tworzenia innych fragmentów kodu.
 
