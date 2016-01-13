@@ -3,10 +3,10 @@
 
 Zostały przeprowadzone manualne testy aplikacyjne, które zweryfikowały czy powstała aplikacja spełnia postawione mu wymagania. Oprócz testów manualnych zostały wykonane również testy behawioralne napisane we frameworku RSpec. Testy behawioralne zostały napisane zgodnie z metodyką  TDD (Test Driven Development). Wymagania, które zostały przetestowane na działającym serwisie to:
 \begin{itemize}
-\item Niezawodność
-\item Intuicyjność interfejsu
-\item Bezpieczeństwo danych
-\item Odporność na nieautoryzowany dostęp do danych
+\item niezawodność,
+\item intuicyjność interfejsu,
+\item bezpieczeństwo danych,
+\item odporność na nieautoryzowany dostęp do danych.
 \end{itemize}
 Oprócz sprawdzenia czy system spełnia postawione przed nim wymagania, przetestowane zostały również funkcjonalności wyspecyfikowane w rozdziale 2. \textit{Analiza wymagań}
 
@@ -142,8 +142,8 @@ Najważniejsze funkcjonalności systemu były przetestowane wzorując się na po
 \section{Realizacja testów}
 Relizacja testów jest oparta o framework RSpec, który został stworzony na potrzeby testowania kodu napisanego w języku Ruby. RSpec udostępnia mechanizmy ułatwiające proces testowania takie jak fabryki obiektów, fabryki losowych danych. Z czasem framework został dostosowany również do testowania frameworku Rails. Testy składają  się z testów:
 \begin{itemize}
-\item Jednostkowych
-\item Funkcjonalnych
+\item jednostkowych,
+\item funkcjonalnych.
 \end{itemize}
 Testy jednostkowe służą do sprawdzania możliwie najmniejszych fragmentów kodu. Przykladem testu jednostkowego jest sprawdzenie czy metoda sprawdzająca przynależność oferty do użytkownika rzeczywiście działa zgodnie z założeniami w przypadku danych wejściowych dających poprawne i niepoprawne rezultaty. Funkcje są sprawdzane również pod kątem odporności na błędne dane wejściowe takie jak złe typy, brak wartości. W takich przypadkach funkcjonalność sprawdza, czy został wyrzucony wyjątek jeżeli tak została funkcja zaprojektowana, czy też wyjątek został poprawnie obsłużony wewnątrz funkcji. Testy jednostkowe są bardzo pożyteczne w trakcie tworzenia oprogramowania, gdyż od samego początku umożliwiają wykrycie niepożądanych zachowań\\
 \\

@@ -1,11 +1,7 @@
 \chapter{Wprowadzenie}
 \label{cha:wprowadzenie}
 
-%---------------------------------------------------------------------------
-
-\section{Cel pracy}
-\label{sec:celPracy}
-Celem pracy jest zaprojektowanie oraz implementacja aplikacji internetowej umożliwiającej wyszukiwanie oraz dodawanie ogłoszeń dotyczących wynajmu i sprzedaży nieruchomości. Tworzony system będzie umożliwiał osobom szukającym lokum w danym mieście przeglądanie ofert oraz korzystanie z szerokiego wachlarza filtrów ułatwiających szukanie idealnego mieszkania lub domu. Aplikacja będzie również oferowała osobom posiadającym nieruchomości, stworzenie ogłoszenia korzystając z prostego i intuicyjnego kreatora ogłoszeń. Ponadto system będzie oferował zarejestrowanym użytkownikom możliwość otrzymywania  spersonalizowanych powiadomień. W przypadku pojawienia się nowych ogłoszeń, które spełniają wymagane przez użytkownika kryteria użytkownik otrzyma stosowną wiadomość poprzez pocztę elektroniczną. Dodatkowo aplikacja będzie umożliwiała nawiązanie kontaktu z osobą, która zamieściła ogłoszenie w serwisie. Ze strony technicznej moim celem jest stworzenie prostego w obsłudze i intuicyjnego serwisu, który będzie zrozumiały również dla mniej zaawansowanych użytkowników komputerów, zachowując jednak określone wymagania dotyczące ogłoszeń, żeby umożliwić użytkownikom dokładne wyszukiwanie ofert. Największym atutem aplikacji jest sposób prezentacji ogłoszeń klientowi w sposób zupełnie odmienny niż realizują to najpopularniejsze obecnie aplikacje tego typu. Moim celem jest zaprezentować użytkownikowi dostępne ogłoszenia jako obiekty umieszczone nie jak zazwyczaj na liście lecz na mapie konkretnego miasta. Dzięki takiemu sposobowi prezentacji, użytkownik w mgnieniu oka będzie w stanie ocenić czy dana lokalizacja jest w dogodnym dla niego miejscu czy też nie.
+Przedstawiona praca inżynierska porusza wiele problemów z dziedziny projektowania oraz implementacji aplikacji internetowych. Głównym jej tematem jest przedstawienie procesu projektowania oraz implementacja aplikacji internetowej służącej do przeglądania oraz wystawiania ofert dotyczących mieszkań.
 
 %---------------------------------------------------------------------------
 
@@ -13,11 +9,11 @@ Celem pracy jest zaprojektowanie oraz implementacja aplikacji internetowej umoż
 \label{sec:zawartoscPracy}
 Struktura pracy jest następująca: 
 \begin{itemize}
-\item Pierwszy rozdział stanowi wprowadzanie, w którym zdefiniowany jest przedmiot pracy, jej zawartość, motyw wyboru tematu oraz analizę podobnych serwisów. 
-\item W rozdziale drugim są przedstawione wymagania biznesowe oraz funkcjonalne i niefunkcjonalne które zostały zdefiniowane przy procesie projektowania aplikacji. Znajduje się w nim także słownik pojęć 
+\item W pierwszym rozdziale zawarto wprowadzanie, w którym zdefiniowany jest przedmiot pracy, jej zawartość, motyw wyboru tematu oraz analizę podobnych serwisów. 
+\item W rozdziale drugim omówiono wymagania biznesowe oraz funkcjonalne i niefunkcjonalne które zostały zdefiniowane przy procesie projektowania aplikacji. Znajduje się w nim także słownik pojęć 
 \item W rozdziale trzecim są przedstawione konkretne rozwiązania z dziedziny projektowania aplikacji. Opisana jest architektura oraz koncept intefejsu graficznego oraz restowego. 
-\item W rozdziale czwartym jest zawarty dokładny opis zastosowanych technologi oraz narzędzi. W tym rozdziale znajdują  się również założenia z dziedziny bezpieczeństwa systemu.
-\item Rozdział piąty zawiera w sobie opis uruchomienia aplikacji oraz instrukcję poruszania się po niej.
+\item W rozdziale czwartym zawarto dokładny opis zastosowanych technologi oraz narzędzi. W tym rozdziale znajdują  się również założenia z dziedziny bezpieczeństwa systemu.
+\item W rozdziale piątym omówiono sposób uruchomienia aplikacji oraz instrukcję poruszania się po niej.
 \item W szóstym rozdziale opisane są metody testowania funkcjonalności dostarczonej aplikacji. 
 \item Siódmy rozdział stanowi podsumowanie pracy w którym są zawarte wnioski.
 \end{itemize}
@@ -33,3 +29,9 @@ Ze względu na koszt zamieszczania ogłoszeń aplikacje można podzielić na dwi
 \item Serwisy bezpłatne, zamieszczenie ogłoszenie w serwisie tego typu najczęsciej jest pozbawione jakicholwiek opłat. W serwisach spotykane są dodatkowe opłaty za wyróżnienie ogłoszenia na tle innych.
 \end{itemize}
 Najbardziej znanymi bezpłatnymi serwisami z ogłoszeniami w Polsce są \quotes{gumtree} oraz \quotes{olx} (dawniej \quotes{tablica}). Nie są to jednak aplikacje dedykowane dla ogłoszeń o nieruchomościach co spowodowało powstanie pewnych niedogodności dla użytkownika podczas wyszukiwania idealnych ofert. Serwisy chcąc być wszechstronymi, pozwalają użytkownikom na dodawanie ogłoszeń które nie są odpowiednio opisane. Jest to duży minus tych aplikacji, gdyż niemożliwym jest zastosowanie dobrego systemu fitrów, który pozwalałby na zawężenie zwracanych wyników wyszukiwania. Największą trudnością jaką dostrzegłem w trakcie analizowania dostępnych rozwiązań była niemożliwość dokładnego szukania we wskazanej lokalizacji. Szukanie ogłoszeń w danej lokalizacji odbywa się najczęściej po tytule dostarczonym przez osobę zamieszczającą ogłoszenie. Nie jest to najlepsze rozwiązanie, gdyż osoby chcące znaleźć nabywców na mieszkanie często podają wiele dzielnic w pobliżu, której znajduje się lokum lub nie podają dokładnej lokalizacji. Wyżej wymienione serwisy oraz wiele dostępnych w sieci aplikacji służących szukaniu ofert nieruchomości łączy również sposób prezentacji wyników wyszukiwania w postaci listy. Jest to niezbyt intuicyjny sposób przedstawiania ofert dotyczących nieruchomości, gdyż nie pozwala na szybkie zorientowanie się w dokładnej lokaliazcji danej oferty, która przecież jest jednym z najważniejszych czynników branych pod uwagę przy szukaniu mieszkań.
+
+%---------------------------------------------------------------------------
+
+\section{Cel pracy}
+\label{sec:celPracy}
+Celem pracy jest zaprojektowanie oraz implementacja aplikacji internetowej umożliwiającej wyszukiwanie oraz dodawanie ogłoszeń dotyczących wynajmu i sprzedaży nieruchomości. Tworzony system będzie umożliwiał osobom szukającym lokum w danym mieście przeglądanie ofert oraz korzystanie z szerokiego wachlarza filtrów ułatwiających szukanie idealnego mieszkania lub domu. Aplikacja będzie również oferowała osobom posiadającym nieruchomości, stworzenie ogłoszenia korzystając z prostego i intuicyjnego kreatora ogłoszeń. Ponadto system będzie oferował zarejestrowanym użytkownikom możliwość otrzymywania  spersonalizowanych powiadomień. W przypadku pojawienia się nowych ogłoszeń, które spełniają wymagane przez użytkownika kryteria użytkownik otrzyma stosowną wiadomość poprzez pocztę elektroniczną. Dodatkowo aplikacja będzie umożliwiała nawiązanie kontaktu z osobą, która zamieściła ogłoszenie w serwisie. Ze strony technicznej moim celem jest stworzenie prostego w obsłudze i intuicyjnego serwisu, który będzie zrozumiały również dla mniej zaawansowanych użytkowników komputerów, zachowując jednak określone wymagania dotyczące ogłoszeń, żeby umożliwić użytkownikom dokładne wyszukiwanie ofert. Największym atutem aplikacji jest sposób prezentacji ogłoszeń klientowi w sposób zupełnie odmienny niż realizują to najpopularniejsze obecnie aplikacje tego typu. Moim celem jest zaprezentować użytkownikowi dostępne ogłoszenia jako obiekty umieszczone nie jak zazwyczaj na liście lecz na mapie konkretnego miasta. Dzięki takiemu sposobowi prezentacji, użytkownik w mgnieniu oka będzie w stanie ocenić czy dana lokalizacja jest w dogodnym dla niego miejscu czy też nie.

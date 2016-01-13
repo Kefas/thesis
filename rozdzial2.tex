@@ -2,14 +2,18 @@
 \label{cha:inzyneriaWymagan}
 Nadrzędnym celem tworzonych systemów informatycznych jest realizacja wymagań klienta. W przeciwnym razie końcowy użytkownik nie będzie zainteresowany ich odbiorem. Najważniejszą rzeczą we wstępnej fazie procesu tworzenia oprogramowania jest dbałość o zidentyfikowanie właściwych wymagań dla danego problemu.
 
+%-----------------------------------------------------------------------------------------------
+
 \section{Zidentyfikowanie użytkowników aplikacji}
 \label{sec:uzytkownicy}
-Użytkownicy systemu mogą zostać podzielieni na dwie grupy:
+Użytkownicy systemu mogą zostać podzieleni na dwie grupy:
 \begin{itemize}
 \item niezalogowanych
 \item zalogowanych
 \end{itemize}
 System udostępnia pewne funkcjonalności osobom niezarejestrowanym w celu zachęcenia ich do korzystania z serwisu. Zezwolenie na używanie pewnych funkcjonalności serwisu wpływa bardzo pozytywnie na pierwsze wrażenie jakie odnosi użytkownik portalu. Bardzo często zdarza się, że osoba która nie może przetestować bez rejestracji czy serwis będzie odpowiadał jej potrzebom, nie będzie skłonna podać swoich danych osobowych.
+
+%-----------------------------------------------------------------------------------------------
 
 \section{Wymagania funkcjonalne}
 \label{sec:wymaganiaFunkcjonalne}
@@ -34,6 +38,16 @@ System ponadto powinien:
 \item Wysyłać maile do użytkowników z wynikami wyszukiwania.
 \item Zliczać odsłony oferty.
 \end{itemize}
+Wymaganie funkcjonalne, które zostały zidentyfikowane dla poszczególnych aktorów zostały zobrazowane na diagramie przypadków użycia (rys. \ref{use-case}). Diagram zawiera wyszczególnionych użytkowników aplikacji jako aktorów oraz funkcjonalności z których mogą korzystać. Niektóre funkcjonalności są rozszerzeniem innych, na przykład używanie filtrów nie wiążę  się  z ustawianiem wszystkich parametrów za każdym razem. Na diagramie jest to pokazane za pomocą przerywanej strzałki z napisem \textit{exclude}. Na diagramie znajdują się również takie funkcjonalności, które są  nierozweralnie połączone ze sobą i tworzą zawsze logiczny ciąg. Przykładem może być dodawanie nowej oferty, nie jest możliwe jej dodanie bez zaznaczenia jej dokładnej lokalizacji. Na diagramie jest to zobrazowane za pomocą przerywanej strzałki z napisem \textit{include}.
+
+\noindent
+\begin{minipage}{\linewidth}
+\makebox[\linewidth]{
+  \includegraphics[keepaspectratio=true,scale=0.75]{pictures/use-case.png}}
+\captionof{figure}{Diagram przypadków użycia}\label{use-case}
+\end{minipage}
+
+%-----------------------------------------------------------------------------------------------
 
 \section{Wymagania niefunkcjonalne}
 \label{sec:wymaganiaNiefunkcjonalne}
@@ -47,25 +61,19 @@ Wymaganie niefunkcjonalne które zostały określone dla omawianego systemu:
 \item System powinien być intuicyjny w użytkowaniu.
 \end{itemize}
 
-\section{Diagram przypadków użycia}
-\label{sec:przypadkiUzycia}
-\noindent
-\begin{minipage}{\linewidth}
-\makebox[\linewidth]{
-  \includegraphics[keepaspectratio=true,scale=0.75]{pictures/use-case.png}}
-\captionof{figure}{Diagram przypadków użycia}\label{use-case}
-\end{minipage}
+%-----------------------------------------------------------------------------------------------
 
 \section{Zidentyfikowanie obiektów świata rzeczywistego}
 Poprawna identyfikacja obiektów świata rzeczywistego jest niezbędna do stworzenia poprawnego schematu bazy danych. Obiekty, które zostały zidentyfikowane podczas procesu analizy aplikacji to:
 \begin{itemize}
-\item Użytkownik (user)
-\item Oferta (offer)
-\item Zdjęcie (photo)
-\item Lokalizacja (location)
-\item Filtr (filter)
+\item użytkownik (user),
+\item oferta (offer),
+\item zdjęcie (photo),
+\item lokalizacja (location),
+\item filtr (filter).
 \end{itemize}
-Zależności jakie zachodzą pomiędzy obiektami:\\
+Zależności jakie zachodzą pomiędzy obiektami zostały przedstawione na diagramie relacji pomiędzy encjami (rys. \ref{erd}). Na diagramie znajdują się wszystkie obiekty zidentyfikowane powyżej, które są połączone między sobą relacjami. Określenie relacji jaka zachodzi pomiędzy obiektami jest przydatna przy określaniu ich krotności (na rysunku zaznaczone jako małe cyfry i litery przy krawędziach łaczących encje).\\
+
 \noindent
 \begin{minipage}{\linewidth}
 \makebox[\linewidth]{
